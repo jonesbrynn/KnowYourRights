@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+    <footer>
+      <mat-toolbar class="toolbarNav">
+        <button
+          mat-flat-button
+          routerLink="/quiz"
+          routerLinkActive="active-link"
+        >
+          <mat-icon class="material-icons color_blue"> star_border</mat-icon>
+          <span>Quiz</span>
+        </button>
+        <button
+          mat-flat-button
+          routerLink="/national-law"
+          routerLinkActive="active-link"
+        >
+          <mat-icon class="material-icons color_blue"
+            >favorite_border
+          </mat-icon>
+          <span>National Law</span>
+        </button>
+      </mat-toolbar>
+    </footer>
+  </body>
+</html>
