@@ -1,10 +1,23 @@
 <mat-toolbar class="bar">
-  <button
-    mat-icon-button
-    class="example-icon favorite-icon"
-    aria-label="Example icon-button with heart icon"
-  >
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <span class="top">National Law</span>
+<button
+  mat-icon-button
+  class="example-icon favorite-icon"
+  aria-label="Example icon-button with heart icon"
+>
+  <mat-icon>favorite</mat-icon>
+</button>
+<span class="top">National Law</span>
 </mat-toolbar>
+
+<div class="app-container">
+  <mat-card *ngFor="let natlaw of natlaws">
+    <mat-card-subtitle>
+      {{ natlaw.header }}
+    </mat-card-subtitle>
+
+    <mat-card-content class="text">
+      {{ natlaw.description }}
+    </mat-card-content>
+
+  </mat-card>
+</div>

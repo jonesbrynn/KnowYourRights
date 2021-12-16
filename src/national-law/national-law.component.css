@@ -4,3 +4,13 @@
 .bar {
   background-color: blueviolet;
 }
+
+.text {
+  white-space: pre-wrap!important;
+}
+
+.app-container {
+  width: 70%;
+  margin: auto;
+  font-family: Lato;
+}
