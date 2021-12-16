@@ -8,3 +8,23 @@
   </button>
   <span class="top">Quiz</span>
 </mat-toolbar>
+
+<div class="app-container">
+  <mat-card>
+    <mat-card-title>
+      I have been pulled over by the police
+    </mat-card-title>
+    <mat-card-content>
+      <mat-radio-group
+      aria-labelledby="question-one-label"
+      class="question-one-group"
+      [(ngModel)]="selectedRight">
+
+      <mat-radio-button *ngFor="let right of rights" class="question-one-button" [value]="right" color="primary">
+        {{ right }}
+      </mat-radio-button>
+
+      </mat-radio-group>
+    </mat-card-content>
+  </mat-card>
+</div>
