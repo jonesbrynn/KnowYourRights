@@ -20,8 +20,8 @@
       class="question-one-group"
       [(ngModel)]="selectedRight">
 
-      <mat-radio-button *ngFor="let right of rights" class="question-one-button" [value]="right" color="primary">
-        {{ right }}
+      <mat-radio-button *ngFor="let right of rights" class="question-one-button" [value]="right.id" color="primary">
+        {{ right.type }}
       </mat-radio-button>
 
       </mat-radio-group>
