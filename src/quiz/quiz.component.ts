@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-quiz',
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quiz.component.css'],
 })
 export class QuizComponent implements OnInit {
-
   selectedRight : string;
+  form: FormGroup;
+
   rights = [
     {id: 1,
     type: 'Rights to Record',
@@ -49,7 +51,13 @@ export class QuizComponent implements OnInit {
     File a written complaint with the agency’s internal affairs division or civilian complaint board. In most cases, you can file a complaint anonymously if you wish.
     `}
   ];
-  constructor() {}
+  constructor(
+    private fb: FormBuilder
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.form= this.fb.group({
+      right: new FormControl('',Validators.required)
+    })
+  }
 }

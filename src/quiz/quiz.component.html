@@ -15,16 +15,26 @@
       I have been pulled over by the police
     </mat-card-title>
     <mat-card-content>
+      <form [formGroup]="form">
       <mat-radio-group
       aria-labelledby="question-one-label"
       class="question-one-group"
-      [(ngModel)]="selectedRight">
+      formControlName="right">
 
       <mat-radio-button *ngFor="let right of rights" class="question-one-button" [value]="right.id" color="primary">
         {{ right.type }}
       </mat-radio-button>
 
       </mat-radio-group>
+      </form>
     </mat-card-content>
   </mat-card>
+
+  <section *ngFor="let right of rights">
+  <mat-card *ngIf="form.value.right == right.id">
+    <mat-card-content class="text">
+      {{ right.description }}
+    </mat-card-content>
+  </mat-card>
+  </section>
 </div>

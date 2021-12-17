@@ -20,3 +20,7 @@
 .question-one-button {
   margin: 5px;
 }
+
+.text{
+  white-space: pre-wrap!important;
+}
